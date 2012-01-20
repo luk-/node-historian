@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+var historian = require(__dirname + '/../lib/historian.js')
+  , fs = require('fs')
+  , colors = require('colors');
+
+var args = process.argv.slice(2)
+  , config = fs.readFileSync(__dirname + '/../conf/config.json', 'utf8')
+  , config = JSON.parse(config)
+  , clipboard = config.main;
+
+var cli_usage = {
+    use: 'hijs --use || -u'.bold + ' [' + 'pasteboard'.underline.bold + ']'
+  , ls: 'hijs ls'.bold
+  , add: 'hijs --add || -a'.bold + ' [' + 'string'.underline.bold + ']'
+  , paste: 'hijs --paste || -p'.bold + ' [' + 'integer'.underline.bold + '] (optional)'
+}
+
+var usage = [
+  ''
+  , 'Usage: hijs [OPTION] STRING'
+  , ''
+  , ' Options:'
+  , ''
+  , ' -u, --use [pasteboard]    Use historian named [pasteboard].'
+  , ' -l, -ls, --list          List current pasteboards on the system with stored data.'
+  , ' -a, --add [string]       Add [string] to current pasteboard in use.'
+  , ' -p, --paste <line>       Output full contents of current pasteboard, or the specified line.'
+  , ' -e, --examine            Output line count and total characters for current pasteboard.'
+  , '' ].join('\n');
+
+if (args.length < 1) historian.add (clipboard);
+
+switch (command = args[0]) {
+
+  case '--usage':
+    return console.log(usage);
+    break;
+
+  case '--use':
+  case '-u':
+    if (args.length < 2) return console.error('Improper usage for option \'' + command + '\'\nusage: ' + cli_usage.use);
+    historian.use (args[1]);
+    break;
+
+  case '--add':
+  case '-a':
+    if (args.length < 2) return console.error('Improper usage for option \'' + command + '\'\nusage: ' + cli_usage.add);
+    historian.add (clipboard, args[1]);
+    break;
+
+  case '--paste':
+  case '-p':
+    historian.paste(clipboard, args[1]);
+    break;
+
+  case '--list':
+  case '-l':
+  case '-ls':
+    historian.ls(clipboard);
+    break;
+
+  case '--examine':
+  case '-e':
+    historian.examine(clipboard);
+    break;
+
+  case '--alias':
+    //if (args.length < 1) 
+    historian.alias(args[1], args[2]);
+    break;
+}
+

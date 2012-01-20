@@ -1,0 +1,26 @@
+{
+  "name": "historian",
+  "preferGlobal": "true",
+  "version": "0.1.0",
+  "author": "Luke Arduini <luke.arduini@me.com>",
+  "description": "command line pasteboard string storage",
+  "bin": {
+    "hijs": "./bin/hijs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/st-luke/historian.git"
+  },
+  "keywords": [
+    "pasteboard",
+    "clipboard",
+    "history"
+  ],
+  "dependencies": {
+    "colors": "0.5.x"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
+}
