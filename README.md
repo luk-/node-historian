@@ -69,6 +69,7 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
   `hijs -p alias_name`
 
+###License: MIT
 
 
 *Readme art by Bobby Fasel*
