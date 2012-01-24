@@ -20,7 +20,7 @@
     "colors": "0.5.x"
   },
   "license": "MIT",
-  "engine": {
+  "engines": {
     "node": ">=0.6.0"
   }
 }
