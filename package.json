@@ -7,6 +7,9 @@
   "bin": {
     "hijs": "./bin/hijs"
   },
+  "scripts": {
+    "test": "./test/run"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/st-luke/node-historian.git"
@@ -17,7 +20,8 @@
     "history"
   ],
   "dependencies": {
-    "colors": "0.5.x"
+    "colors": "0.5.x",
+    "ensure": "0.4.x"
   },
   "license": "MIT",
   "engines": {

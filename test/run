@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+for files in test/*.js;
+  do node $files;
+done;
