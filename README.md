@@ -33,6 +33,8 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
   `hijs -l`
 
+![hijs ls](img/hijs_ls.png)
+
   To create or use a pasteboard:
 
   `hijs -u [name]`
@@ -43,6 +45,8 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
   `hijs -e`
 
+![hijs -e](img/hijs_e.png)
+
   This will return the name, total entries, and total characters. 
 
   Adding to a pasteboard is easy:
@@ -52,6 +56,10 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
   You can also use the output from something else:
 
   `echo 'I need to remember this!!' | hijs`
+
+or maybe a log:
+
+![hijs piping](img/hijs_pipe.png)
 
   You can output the whole pasteboard with:
 
@@ -68,6 +76,16 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
   You paste aliases with:
 
   `hijs -p alias_name`
+
+  Or you can get a little fancier if you're doing something like running multiple dev instances or whatever I don't know:
+
+![hijs alias piping](img/hijs_alias.png)
+
+The front end source will end up in the pasteboard:
+
+  `hijs -p`
+
+![hijs ls](img/hijs_alias_output.png)
 
 ###License: MIT
 
