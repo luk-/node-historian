@@ -33,7 +33,7 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
   `hijs -l`
 
-![hijs ls](img/hijs_ls.png)
+![hijs ls](https://github.com/st-luke/node-historian/raw/master/img/hijs_ls.png)
 
   To create or use a pasteboard:
 
@@ -45,7 +45,7 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
   `hijs -e`
 
-![hijs -e](img/hijs_e.png)
+![hijs -e](https://github.com/st-luke/node-historian/raw/master/img/hijs_e.png)
 
   This will return the name, total entries, and total characters. 
 
@@ -59,7 +59,7 @@ Historian is a simple command line utility for storing strings or blocks of UTF8
 
 or maybe a log:
 
-![hijs piping](img/hijs_pipe.png)
+![hijs piping](https://github.com/st-luke/node-historian/raw/master/img/hijs_pipe.png)
 
   You can output the whole pasteboard with:
 
@@ -79,13 +79,13 @@ or maybe a log:
 
   Or you can get a little fancier if you're doing something like running multiple dev instances or whatever I don't know:
 
-![hijs alias piping](img/hijs_alias.png)
+![hijs alias piping](https://github.com/st-luke/node-historian/raw/master/img/hijs_alias.png)
 
 The front end source will end up in the pasteboard:
 
   `hijs -p`
 
-![hijs ls](img/hijs_alias_output.png)
+![hijs ls](https://github.com/st-luke/node-historian/raw/master/img/hijs_alias_output.png)
 
 ###License: MIT
 
