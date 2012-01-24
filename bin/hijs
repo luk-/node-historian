@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var historian = require(__dirname + '/../lib/historian.js')
+var historian = require(__dirname + '/../lib/historian')
   , fs = require('fs')
   , colors = require('colors');
 
