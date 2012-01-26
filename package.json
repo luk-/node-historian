@@ -1,7 +1,7 @@
 {
   "name": "historian",
   "preferGlobal": "true",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Luke Arduini <luke.arduini@me.com>",
   "description": "command line pasteboard string storage",
   "bin": {
